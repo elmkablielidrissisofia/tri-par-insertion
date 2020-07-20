@@ -1,0 +1,17 @@
+ALGORITHM  tri_Insertion ( A : array of items )
+VAR
+
+ holePosition=INTEGER;
+ valueToInsert=INTEGER;
+BEGIN
+FOR i FROM i=1 TO length(A) STEP step  DO
+      valueToInsert = A[i]
+      holePosition = i
+      WHILE (holePosition > 0 and A[holePosition-1] > valueToInsert) DO
+          A[holePosition] = A[holePosition-1]
+         holePosition = holePosition -1
+      END_WHILE
+       A[holePosition] = valueToInsert
+END_FOR
+    
+END
